@@ -26,6 +26,15 @@ function addTask() {
         e.target.parentElement.classList.toggle('completed');
     }
 });
+    taskList.addEventListener('click', (e) => {
+    if (e.target.classList.contains('delete-btn')) {
+        e.target.parentElement.remove();
+    }
+    
+    if (e.target.tagName === 'SPAN') {
+        e.target.parentElement.classList.toggle('completed');
+    }
+});
     taskList.appendChild(li);
     taskInput.value = '';
 }
