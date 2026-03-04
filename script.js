@@ -21,7 +21,11 @@ function addTask() {
         <span>${taskText}</span>
         <button class="delete-btn">Șterge</button>
     `;
-    
+    taskList.addEventListener('click', (e) => {
+    if (e.target.tagName === 'SPAN') {
+        e.target.parentElement.classList.toggle('completed');
+    }
+});
     taskList.appendChild(li);
     taskInput.value = '';
 }
