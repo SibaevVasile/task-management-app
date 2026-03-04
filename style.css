@@ -65,3 +65,21 @@ h1 {
     text-decoration: line-through;
     color: #999;
 }
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .task-input {
+        flex-direction: column;
+    }
+    
+    #addTaskBtn {
+        width: 100%;
+    }
+}
